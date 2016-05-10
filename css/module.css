@@ -13,6 +13,12 @@ nav:hover ul{
   }
   nav ul {
     display: block;
+    float: right;
+    position: fixed;
+  }
+  .icon{
+    width: 1.5em;
+    height: 1.5em;
   }
   nav li a{
     font-size: 3em;
@@ -20,18 +26,18 @@ nav:hover ul{
     color: black;
   }
   nav li{
-    display: inline;
-    padding-right: 9.5%;
+    display: block;
+    /*padding-right: 9.5%;*/
     border-bottom: none;
-    padding-left: 9.5%;
+    /*padding-left: 9.5%;*/
   }
   nav:hover ul{
     display: inline;
-    float: none;
+    float: right;
   }
-  img {
-    max-width: 30%;
-    padding-left: 5%;
-    padding-right: 5%;
+  #pic1{
+    margin-left: 25%;
+    max-width: 25%;
+    margin-top: 1%;
   }
 }
