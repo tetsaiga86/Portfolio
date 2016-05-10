@@ -14,7 +14,7 @@ nav:hover ul{
   nav ul {
     display: block;
     float: right;
-    position: fixed;
+    /*position: fixed;*/
   }
   .icon{
     width: 1.5em;
@@ -39,5 +39,6 @@ nav:hover ul{
     margin-left: 25%;
     max-width: 25%;
     margin-top: 1%;
+    float: none;
   }
 }

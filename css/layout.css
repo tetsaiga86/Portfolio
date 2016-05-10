@@ -23,3 +23,7 @@ width: 3em;
   border: thick solid black;
   margin-top: 4%;
 }
+
+.template{
+  display: none;
+}
