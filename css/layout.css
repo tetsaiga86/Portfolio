@@ -1,0 +1,10 @@
+.list{
+  display:none;
+}
+
+.burger{
+display: block;
+float: right;
+height: 3em;
+width: 3em;
+}

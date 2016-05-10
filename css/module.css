@@ -1,19 +1,9 @@
-.list{
-  display:none;
-}
 nav:hover ul{
   display:block;
   float: right;
 }
-.burger{
-display: block;
-float: right;
-height: 3em;
-width: 3em;
-}
-img{
-  max-width: 100%;
-}
+
+
 @media only screen and (min-width:640px){
   .burger{
     display: none;
