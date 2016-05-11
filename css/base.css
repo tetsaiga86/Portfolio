@@ -5,3 +5,7 @@ img{
 nav{
   position: fixed;
 }
+
+body{
+  margin: 0;
+}

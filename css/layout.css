@@ -10,7 +10,7 @@ position: fixed;
 right: 2px;
 }
 
-.icon{
+.icon, .icon-home, .icon-work{
   width: 3em;
   height: 3em;
 }
@@ -27,4 +27,12 @@ right: 2px;
 
 .template{
   display: none;
+}
+.text{
+  margin: 0;
+  background-image: url(../img/wall.jpg);
+  color: white;
+}
+.tab-content{
+  margin: 10%;
 }
