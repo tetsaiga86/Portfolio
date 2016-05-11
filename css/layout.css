@@ -1,0 +1,30 @@
+.list{
+  display:none;
+}
+
+.burger{
+float: right;
+height: 3em;
+width: 3em;
+position: fixed;
+right: 2px;
+}
+
+.icon{
+  width: 3em;
+  height: 3em;
+}
+
+.links{
+  list-style: none;
+}
+
+#pic1{
+  border-radius: 100%;
+  border: thick solid black;
+  margin-top: 4%;
+}
+
+.template{
+  display: none;
+}
