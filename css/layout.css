@@ -3,10 +3,11 @@
 }
 
 .burger{
-display: block;
 float: right;
 height: 3em;
 width: 3em;
+position: fixed;
+right: 2px;
 }
 
 .icon{
