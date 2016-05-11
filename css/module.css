@@ -20,8 +20,8 @@ nav:hover ul{
     top: 0px;
   }
   .icon, .icon-home, .icon-work{
-    width: 1.5em;
-    height: 1.5em;
+    width: 1em;
+    height: 1em;
   }
   nav li a{
     font-size: 3em;

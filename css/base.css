@@ -9,3 +9,16 @@ nav{
 body{
   margin: 0;
 }
+
+h2{
+  margin-top: 0;
+}
+p{
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
+
+li, ul{
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
