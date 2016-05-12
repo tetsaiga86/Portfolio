@@ -19,9 +19,9 @@ nav:hover ul{
     right: 10%;
     top: 0px;
   }
-  .icon{
-    width: 1.5em;
-    height: 1.5em;
+  .icon, .icon-home, .icon-work{
+    width: 1em;
+    height: 1em;
   }
   nav li a{
     font-size: 3em;

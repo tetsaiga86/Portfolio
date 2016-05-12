@@ -1,10 +1,10 @@
 var jobs = [];
 
-function job (shit) {
-  this.company = shit.company;
-  this.position = shit.position;
-  this.dates = shit.dates;
-  this.responsibilities = shit.responsibilities;
+function job (opt) {
+  this.company = opt.company;
+  this.position = opt.position;
+  this.dates = opt.dates;
+  this.responsibilities = opt.responsibilities;
 }
 
 job.prototype.toHtml = function() {
@@ -24,3 +24,18 @@ jobHistory.forEach(function(ele) {
 jobs.forEach(function(a){
   $('#jobs').append(a.toHtml());
 });
+
+// click event listeners
+handleMainNav = function() {
+  $('.icon-home').on('click', function() {
+    $('.tab-content').hide();
+    $('#about').fadeIn('#about');
+  });
+  $('.icon-work').on('click', function() {
+    $('.tab-content').hide();
+    $('#work').fadeIn('#work');
+  });
+
+  $('.icon-home').click();
+};
+handleMainNav();
