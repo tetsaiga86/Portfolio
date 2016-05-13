@@ -18,12 +18,12 @@ job.prototype.toHtml = function() {
 };
 
 jobHistory.forEach(function(ele) {
-  jobs.push(new job(ele));
+  jobPush(new job(ele));
 });
 
-jobs.forEach(function(a){
-  $('#jobs').append(a.toHtml());
-});
+// jobs.forEach(function(a){
+  // $('#jobs').append(a.toHtml());
+// });
 
 // click event listeners
 handleMainNav = function() {
@@ -39,3 +39,13 @@ handleMainNav = function() {
   $('.icon-home').click();
 };
 handleMainNav();
+
+// handlebar js
+
+function jobPush(job){
+  var source = $('#job-template').html();
+  var template = Handlebars.compile(source);
+  var context = {company: job.company, dates: job.dates, position: job.position, respons: job.responsibilities};
+  var html = template(context);
+  $('#jobs').append(html);
+};
