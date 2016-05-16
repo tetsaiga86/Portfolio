@@ -16,7 +16,7 @@ nav:hover ul{
   }
   nav ul {
     position: fixed;
-    right: 10%;
+    right: 1%;
     top: 0px;
   }
   .icon, .icon-home, .icon-work{
@@ -34,7 +34,7 @@ nav:hover ul{
   }*/
   nav:hover ul{
     position: fixed;
-    right: 10%;
+    right: 1%;
     top: 0px;
   }
   #pic1{

@@ -24,3 +24,5 @@ var jobHistory = [
     responsibilities: 'This is where I talk about all the stuff I did, and I pretend I frigin\' loved it...',
   }
 ];
+
+var projectHistory = [{}];

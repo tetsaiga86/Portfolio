@@ -1,4 +1,5 @@
 var jobs = [];
+var projects = [];
 
 function job (opt) {
   this.company = opt.company;
@@ -8,22 +9,14 @@ function job (opt) {
 }
 
 job.prototype.toHtml = function() {
-  var $newjob = $('.template').clone();
-  $newjob.find('#name').text(this.company);
-  $newjob.find('#dates').text(this.dates);
-  $newjob.find('#position').text(this.position);
-  $newjob.find('#respons').text(this.responsibilities);
-  $newjob.removeClass('template');
-  return $newjob;
+  var source = $('#job-template').html();
+  var template = Handlebars.compile(source);
+  return template(this);
 };
 
 jobHistory.forEach(function(ele) {
-  jobPush(new job(ele));
+  jobs.push(new job(ele));
 });
-
-// jobs.forEach(function(a){
-  // $('#jobs').append(a.toHtml());
-// });
 
 // click event listeners
 handleMainNav = function() {
@@ -35,17 +28,32 @@ handleMainNav = function() {
     $('.tab-content').hide();
     $('#work').fadeIn('#work');
   });
-
   $('.icon-home').click();
 };
+
+function project (opt) {
+  this.title = opt.title;
+  this.date = opt.date;
+  this.type = opt.type;
+  this.description = opt.description;
+}
+
+project.prototype.toHtml = function() {
+  var source = $('#project-template').html();
+  var template = Handlebars.compile(source);
+  return template(this);
+};
+
+projectHistory.forEach(function(ele) {
+  projects.push(new project(ele));
+});
+
 handleMainNav();
 
-// handlebar js
+jobs.forEach(function(obj) {
+  $('#jobs').append(obj.toHtml());
+});
 
-function jobPush(job){
-  var source = $('#job-template').html();
-  var template = Handlebars.compile(source);
-  var context = {company: job.company, dates: job.dates, position: job.position, respons: job.responsibilities};
-  var html = template(context);
-  $('#jobs').append(html);
-};
+projects.forEach(function(obj) {
+  $('#projects').append(obj.toHtml());
+});
