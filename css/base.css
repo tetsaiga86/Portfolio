@@ -22,3 +22,7 @@ li, ul{
   margin-bottom: 0;
   padding-bottom: 1em;
 }
+
+a{
+  color: white;
+}

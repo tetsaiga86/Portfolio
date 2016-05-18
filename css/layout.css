@@ -10,7 +10,7 @@ position: fixed;
 right: 2px;
 }
 
-.icon, .icon-home, .icon-work{
+.icon, .icon-home, .icon-work, .icon-project{
   width: 3em;
   height: 3em;
 }

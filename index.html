@@ -18,11 +18,11 @@
     </script>
     <script id="project-template" type="text/x-handlebars-template">
       <article class="template">
-        <h1 class="title">{{title}}</h1>
+        <h1 class="name">{{name}}</h1>
         <ul>
           <li class="date">{{date}}</li>
           <li class="type">{{type}}</li>
-          <li class="desciption">{{{description}}}</li>
+          <li class="githubrepo"><a href={{{githubrepo}}}>{{githubrepo}}</a></li>
         </ul>
       </article>
     </script>
@@ -38,6 +38,7 @@
           <li class="links"><a href="https://www.twitter.com"><img class="icon" src="img/twit.png" alt="" /></a></li>
           <li class="links"><a href="#"><img class="icon-home" src="img/home.png" alt="" /></a></li>
           <li class="links"><a href="#"><img class="icon-work" src="img/work.png" alt="" /></a></li>
+          <li class="links"><a href="#"><img class="icon-project" src="img/project.png" alt="" /></a></li>
         </ul>
       </nav>
       <div class="pics">
@@ -68,10 +69,16 @@
         <h2>Work Experience</h2>
         </section>
       </div>
+      <div class="tab-content" id="project">
+      <section id="projects">
+        <h2>Projects</h2>
+        </section>
+      </div>
     </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
   <script type="text/javascript" src="js/job.js"></script>
+  <script type="text/javascript" src="js/project.js"></script>
   <script type="text/javascript" src="js/view.js"></script>
 </html>
