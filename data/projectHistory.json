@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Project 1",
+    "date":"Jan 2016",
+    "type":"Web app",
+    "githubrepo":"https://github.com/tetsaiga86"
+  },
+  {
+    "name":"Project 2",
+    "date":"Feb 2016",
+    "type":"Web app",
+    "githubrepo":"https://github.com/tetsaiga86"
+  },
+  {
+    "name":"Project 3",
+    "date":"March 2016",
+    "type":"Web app",
+    "githubrepo":"https://github.com/tetsaiga86"
+  },
+  {
+    "name":"Project 4",
+    "date":"April 2016",
+    "type":"Web app",
+    "githubrepo":"https://github.com/tetsaiga86"
+  }
+]
