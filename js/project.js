@@ -2,15 +2,19 @@ var projects = [];
 
 function Project (opt) {
   this.name = opt.name;
-  this.date = opt.date;
-  this.type = opt.type;
-  this.githubrepo = opt.githubrepo;
+  this.date = opt.pushed_at;
+  this.type = opt.language;
+  this.githubrepo = opt.html_url;
 }
 
 var retrieveProjectHistory = function(){
-  $.getJSON('data/projectHistory.json', function(data){
+  $.getJSON('https://api.github.com/users/tetsaiga86/repos', function(data){
     localStorage.projectHistory = JSON.stringify(data);
-    data.forEach(function(ele) {
+    var filtered = data.filter(function(project){
+      return !project.fork;
+    });
+
+    filtered.forEach(function(ele) {
       projects.push(new Project(ele));
     });
   });

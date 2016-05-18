@@ -16,7 +16,7 @@ function Project (opt) {
 }
 
 var retrieveJobHistory = function(){
-  $.getJSON('data/jobHistory.json', function(data){
+  $.getJSON('https://raw.githubusercontent.com/tetsaiga86/Portfolio/class-07/data/jobHistory.json', function(data){
     localStorage.jobHistory = JSON.stringify(data);
     data.forEach(function(ele) {
       jobs.push(new Job(ele));
