@@ -8,13 +8,6 @@ function Job (opt) {
   this.responsibilities = opt.responsibilities;
 }
 
-function Project (opt) {
-  this.title = opt.title;
-  this.date = opt.date;
-  this.type = opt.type;
-  this.description = opt.description;
-}
-
 var retrieveJobHistory = function(){
   $.getJSON('https://raw.githubusercontent.com/tetsaiga86/Portfolio/class-07/data/jobHistory.json', function(data){
     localStorage.jobHistory = JSON.stringify(data);
