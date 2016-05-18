@@ -1,3 +1,4 @@
+
 var jobs = [];
 var projects = [];
 
@@ -13,12 +14,6 @@ Job.prototype.toHtml = function() {
   var template = Handlebars.compile(source);
   return template(this);
 };
-$.getJSON('data/jobHistory.json', function(data){
-  localStorage.jobHistory = JSON.stringify(data);
-  data.forEach(function(ele) {
-    jobs.push(new Job(ele));
-  });
-});
 
 function Project (opt) {
   this.title = opt.title;
@@ -36,12 +31,21 @@ Project.prototype.toHtml = function() {
 // projectHistory.forEach(function(ele) {
 //   projects.push(new Project(ele));
 // });
+// projects.forEach(function(obj) {
+//   $('#projects').append(obj.toHtml());
+// });
 
 var callJobs = function(){
   jobs.forEach(function(obj) {
     $('#jobs').append(obj.toHtml());
   });
 };
-// projects.forEach(function(obj) {
-//   $('#projects').append(obj.toHtml());
-// });
+
+var getJSON = function(){
+  $.getJSON('data/jobHistory.json', function(data){
+    localStorage.jobHistory = JSON.stringify(data);
+    data.forEach(function(ele) {
+      jobs.push(new Job(ele));
+    });
+  });
+};
