@@ -1,5 +1,5 @@
 // click event listeners
-(function(){
+(function(context){
   handleMainNav = function() {
     $('.icon-home').on('click', function() {
       $('.tab-content').hide();
@@ -25,7 +25,7 @@
   };
 
   var renderJobs = function(){
-    var htmlSnippets = jobs.map(renderJob);
+    var htmlSnippets = context.jobs.map(renderJob);
 
     var htmlString = htmlSnippets.reduce(function(prev, current){
       return prev + current;
@@ -42,7 +42,7 @@
   };
 
   var renderProjects = function(){
-    var htmlSnippets = projects.map(renderProject);
+    var htmlSnippets = context.projects.map(renderProject);
 
     var htmlString = htmlSnippets.reduce(function(prev, current){
       return prev + current;
@@ -53,6 +53,6 @@
   };
 
   handleMainNav();
-  retrieveJobHistory();
-  retrieveProjectHistory();
+  context.retrieveJobHistory();
+  context.retrieveProjectHistory();
 })(window);
