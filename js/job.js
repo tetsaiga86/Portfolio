@@ -16,11 +16,3 @@ var retrieveJobHistory = function(){
     });
   });
 };
-
-//for future project list
-// projectHistory.forEach(function(ele) {
-//   projects.push(new Project(ele));
-// });
-// projects.forEach(function(obj) {
-//   $('#projects').append(obj.toHtml());
-// });
