@@ -1,4 +1,4 @@
-(function(module) {
+(function(context) {
   var aboutController = {};
 
   aboutController.index = function() {
@@ -7,5 +7,5 @@
 
   };
 
-  module.aboutController = aboutController;
+  context.aboutController = aboutController;
 })(window);

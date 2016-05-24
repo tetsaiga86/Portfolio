@@ -1,4 +1,4 @@
-(function(module) {
+(function(context) {
   var jobController = {};
 
   jobController.index = function() {
@@ -6,5 +6,5 @@
     $('#work').fadeIn('slow');
   };
 
-  module.projectController = projectController;
+  context.jobController = jobController;
 })(window);

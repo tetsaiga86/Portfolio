@@ -8,7 +8,7 @@
     this.githubrepo = opt.html_url;
   }
 
-  context.retrieveProjectHistory = function(){
+  context.retrieveProjectHistory = function(render){
     $.getJSON('https://api.github.com/users/tetsaiga86/repos', function(data){
       localStorage.projectHistory = JSON.stringify(data);
       var filtered = data.filter(function(project){
@@ -18,6 +18,7 @@
       filtered.forEach(function(ele) {
         projects.push(new Project(ele));
       });
+      render();
     });
   };
 })(window);
