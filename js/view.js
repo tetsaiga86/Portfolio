@@ -1,22 +1,20 @@
 // click event listeners
 (function(context){
-  handleMainNav = function() {
-    $('.icon-home').on('click', function() {
-      $('.tab-content').hide();
-      $('#about').fadeIn('slow');
-    });
-    $('.icon-work').on('click', function() {
-      renderJobs();
-      $('.tab-content').hide();
-      $('#work').fadeIn('slow');
-    });
-    $('.icon-project').on('click', function() {
-      renderProjects();
-      $('.tab-content').hide();
-      $('#project').fadeIn('slow');
-    });
-    $('.icon-home').click();
-  };
+  // handleMainNav = function() {
+  //   // $('.icon-home').on('click', function() {
+  //   //   $('.tab-content').hide();
+  //   //   $('#about').fadeIn('slow');
+  //   // });
+  //   $('.icon-work').on('click', function() {
+  //     $('.tab-content').hide();
+  //     $('#work').fadeIn('slow');
+  //   });
+  //   // $('.icon-project').on('click', function() {
+  //   //   $('.tab-content').hide();
+  //   //   $('#project').fadeIn('slow');
+  //   // });
+  //   // $('.icon-home').click();
+  // };
 
   var renderJob = function(job){
     var source = $('#job-template').html();
@@ -34,6 +32,7 @@
     $('#jobs').append(htmlString);
 
   };
+  renderJobs();
 
   var renderProject = function(project){
     var source = $('#project-template').html();
@@ -51,6 +50,7 @@
     $('#projects').append(htmlString);
 
   };
+  renderProjects();
 
   handleMainNav();
   context.retrieveJobHistory();
