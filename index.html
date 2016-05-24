@@ -20,9 +20,9 @@
       <article class="template">
         <h1 class="name">{{name}}</h1>
         <ul>
-          <li class="date">{{date}}</li>
-          <li class="type">{{type}}</li>
-          <li class="githubrepo"><a href={{{githubrepo}}}>{{githubrepo}}</a></li>
+          <li class="date">{{pushed_at}}</li>
+          <li class="type">{{language}}</li>
+          <li class="githubrepo"><a href={{{html_url}}}>{{html_url}}</a></li>
         </ul>
       </article>
     </script>
@@ -79,6 +79,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <script type="text/javascript" src="js/githubkey.js"></script>
   <script type="text/javascript" src="js/job.js"></script>
   <script type="text/javascript" src="js/project.js"></script>
   <script type="text/javascript" src="js/view.js"></script>
