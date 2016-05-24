@@ -1,24 +1,18 @@
 (function(context){
   context.projects = [];
 
-  function Project (opt) {
-    this.name = opt.name;
-    this.date = opt.pushed_at;
-    this.type = opt.language;
-    this.githubrepo = opt.html_url;
-  }
-
   context.retrieveProjectHistory = function(render){
-    $.getJSON('https://api.github.com/users/tetsaiga86/repos', function(data){
-      localStorage.projectHistory = JSON.stringify(data);
-      var filtered = data.filter(function(project){
-        return !project.fork;
-      });
-
-      filtered.forEach(function(ele) {
-        projects.push(new Project(ele));
-      });
-      render();
+    $.ajax({
+      url: 'https://api.github.com/users/tetsaiga86/repos',
+      type: 'GET',
+      headers: {'Authorization': 'token ' + githubkey},
+      success: function(data){
+        localStorage.projectHistory = JSON.stringify(data);
+        context.projects = data.filter(function(project){
+          return !project.fork;
+        });
+        render();
+      }
     });
   };
 })(window);
