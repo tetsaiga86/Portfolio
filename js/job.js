@@ -8,12 +8,13 @@
     this.responsibilities = opt.responsibilities;
   }
 
-  context.retrieveJobHistory = function(){
+  context.retrieveJobHistory = function(render){
     $.getJSON('https://raw.githubusercontent.com/tetsaiga86/Portfolio/class-07/data/jobHistory.json', function(data){
       localStorage.jobHistory = JSON.stringify(data);
       data.forEach(function(ele) {
         jobs.push(new Job(ele));
       });
+      render();
     });
   };
 })(window);
