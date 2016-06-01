@@ -2,7 +2,7 @@
   context.projects = [];
 
   context.retrieveProjectHistory = function(render){
-    $.get('/github/users/codefellows-seattle-301d4/repos' +
+    $.get('/github/users/tetsaiga86/repos' +
     '?per+page=15' +
     '&sort=updated')
     .done(function(data){
