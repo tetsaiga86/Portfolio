@@ -1,5 +1,5 @@
 img{
-  max-width: 100%;
+  max-width: 94%;
 }
 
 nav{
@@ -20,7 +20,7 @@ p{
 
 li, ul{
   margin-bottom: 0;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 a{
